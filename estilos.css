@@ -1,0 +1,624 @@
+*{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --colorCorp:#096135;
+    --black:#252a34;
+    --bluelight:#03380a;
+    --white:#eaeaea;
+    --title:35px;
+    --text:19px;
+}
+
+
+
+.body{
+    background-color: var(--white);
+    grid-template-areas: 
+    "header-1"
+    "listaContent-2"
+    "nav-3"
+    "aves-4"
+    "formulario-5"
+    "footer-6"
+    ;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    width: 100%;
+    grid-area: header-1;
+}
+
+.cabeza{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.cabeza .logo{
+    position: absolute;
+    left: 12px;
+    width: 50px;
+    height: 80%;
+    object-fit: cover;
+    background-size: cover;
+    background-image: url(/images/—Pngtree—a\ family\ of\ three\ characters_4074441.png);
+}
+
+.cabeza .menuNavegacion{
+    position: absolute;
+    width: 50px;
+    height: 80%;
+    right: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+video{
+    width: 100%;
+    height: 100vh;
+    z-index:-1;
+    object-fit: cover;
+    object-position: center center;
+    background-image: url(/images/plantasHeader.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.cabeza .menuNavegacion .btn-menu > .fa-bars{
+    font-size: 20px;
+    cursor: pointer;
+    color: transparent;
+    right: -100%;
+}
+
+.listaContent {
+    flex-grow: 1; /* Hace que la lista ocupe el espacio restante */
+}
+
+.lista {
+    list-style: none;
+    display: flex; /* Disposición en línea (horizontal) */
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.lista li {
+    margin-left: 20px; /* Espacio entre los elementos */
+}
+
+.lista a {
+    color: #060606;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.listaContent .lista li a.activo{
+    background: none;
+    color: #35e911;
+}
+.lista a:hover {
+    color: var(--colorCorp); 
+}
+.nav{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    grid-area: nav-3;
+
+}
+
+.nav .logo1{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 220px;
+    height: 390px;
+}
+
+.nav .logo1 .text1{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+    width: 200%;
+    height: 25%;
+    bottom: 0;
+    top: 0;
+    font-weight: 550;
+    font-size: 4ch;
+}
+
+.nav .logo1 .img1{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.logo1 .img1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav .logo1 .text2{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    font-size: 15pt;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    font-weight: 500;
+    font-size: 3ch;
+}
+.Abajo{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #ffff;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px 45px 0px 0px;
+
+}
+.btn-abajo > .fa-chevron-down{
+    right: -30%;
+    position: relative;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.7ch;
+}
+
+
+/* Estilos para la sección del formulario */
+.formulario {
+    grid-area: formulario-5;
+    display: flex; /* Utiliza Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center; /* Centra el botón verticalmente si la sección tiene una altura mayor */
+    height: 10vh; /* Ajusta según tus necesidades (opcional, para centrar verticalmente en toda la pantalla) */
+}
+
+/* Estilo para el enlace que parece un botón */
+.boton-enlace {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none; /* Remueve el subrayado del enlace */
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-enlace:hover {
+    background-color: #555;
+}
+
+.sec-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85.5vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #7b807b;
+}
+
+/*************contacto.html*************************/
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+}
+
+.contacto {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.mapa iframe {
+    border: 0;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+}
+
+.contacto-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.contacto-info p {
+    margin: 0;
+    color: #333;
+}
+
+
+
+/************************AVES***************/
+
+.fondo{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fondo .ave1{
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    top: 2.5%;
+    
+}
+
+.fondo .ave2{
+    position: absolute;
+    width: 90%;
+    height: 30%;
+}
+
+.fondo .ave3{
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    bottom: 2.5%;
+}
+
+.fondo .ave1 .izq{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    background-image: url(/images/1G.jpg);
+    border-radius: 20%;
+    box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+
+.fondo .ave1 .der{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    border-radius: 20%;
+}
+.fondo .ave2 .izq{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    border-radius: 20%;
+}
+
+.fondo .ave2 .der{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    border-radius: 20%;
+    background-image: url(/images/2g.jpg);
+    border-radius: 20%;
+    box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.2);
+    background-size: cover;
+}
+.fondo .ave3 .izq{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    background-image: url(/images/3g.jpeg);
+    border-radius: 20%;
+    box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    border-radius: 20%;
+}
+
+.fondo .ave3 .der{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    border-radius: 20%;
+}
+
+.botonReserva{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(12, 77, 138);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.botonReserva .boton{
+    position: absolute;
+    background-color: #eaeaea;
+    height: auto;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.botonReserva .boton a{
+    text-align: center;
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    grid-area: footer-6;
+}
+
+.footer .container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.footer .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    color: #0c0c0c;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #152b4b; /* Cambia el color cuando se pasa el cursor por encima */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/******Ubicacion**************/
+
+
+/******Carrusel************/
+.gallery {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    height: 86vh;
+}
+
+.gallery-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 86vh;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    transition: transform 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:900px){
+    .cabeza .menuNavegacion .btn-menu > .fa-bars{
+        font-size: 20px;
+        cursor: pointer;
+        color: #000000;
+    }
+    
+    .listaContent{
+        position: fixed;
+        top: 30px;
+        right: -100%;
+        background: #fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+        z-index: 2;
+        height: 100vh;
+        grid-area: listaContent-2;
+    }
+    .listaContent .lista{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 4px solid black;
+    }
+    .listaContent .lista li{
+        border-bottom: 2px solid var(--black);
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+    .listaContent .lista li a{
+        padding: 12px 0;
+        text-decoration: none;
+    }
+    .listaContent .lista li a.activo{
+        background: none;
+        color: var(--colorCorp);
+    }
+    .listaContent .lista li a:hover{
+        background: none;
+        color: var(--colorCorp);
+    }
+    .btn-menu > .fa-bars:hover{
+        color: var(--colorCorp)
+    }
+    
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+}
